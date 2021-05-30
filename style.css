@@ -1,0 +1,327 @@
+@font-face{
+    font-family: "Pangolin-Regular";
+    src: url(./fonts/Pangolin-Regular.woff);
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./imgages/fon.png);
+    background-repeat: repeat;
+    min-width: 480px;
+    font-family: "Pangolin-Regular";
+}
+header{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 20px 0;
+    width: 100%;
+    background-color: black;
+}
+nav{
+    display: flex;
+    background-color: brown;
+    z-index: 1;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 30px 50px;
+    width: 1200px;
+}   
+main p{
+    font-size: 24px;
+    text-align: justify;
+    line-height: 1.5;
+    padding-top: 20px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: black;
+    font-size: x-large;
+    width: 100%;
+}
+footer>a:visited{
+    color: white;
+    text-decoration: underline;
+}
+footer>a{
+    color: white;
+    text-decoration: underline;
+}
+a{
+    text-decoration: none;
+    color: brown;
+}
+a:hover{
+    text-decoration: underline;
+}
+h1{
+    font-size: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+iframe{
+    margin: 10px auto;
+}
+.logo{
+   display: flex;
+   justify-content: center;
+   padding-top: 30px;
+} 
+.menu{
+    padding: 10px 30px;
+    display: flex;
+    list-style-type: none;
+}
+.menu>li{
+    font-size: 24px;
+    margin-right: 50px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.menu li a{
+    color: black;
+}
+.menu li:hover{
+    color: white;  
+}
+.menu li a:hover{
+    color: white;
+    text-decoration: none;
+}
+.submenu{
+    display: none;  
+    position: absolute;
+    background-color: rgba(165, 42, 42, 0.932);
+}
+.menu>li:hover>.submenu{
+    display: block;
+}
+.submenu>li{
+    list-style-image: url(./imgages/ql.png);
+    margin: 30px;
+    font-weight: normal;
+}
+.block-1{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid brown;
+    padding-bottom: 20px;
+}
+.pic{
+    display: block;
+    width: 500px;
+    float: left;
+    margin-right: 20px;
+}
+.pages-nav, .pages-nav-left, .pages-nav-right{
+    display: flex;
+    font-size: 24px;
+    padding: 20px 0;
+}
+.pages-nav{
+    justify-content: space-between;
+}
+.pages-nav-left{
+    justify-content: flex-start;
+}
+.pages-nav-right{
+    justify-content: flex-end;
+}
+.slider{
+    display: flex;
+    position: relative;
+}
+.mySlides {
+    display: none;
+}
+.mySlides img{
+    width:100%;
+    border-radius: 30px;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}  
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}  
+  .active, .dot:hover {
+    background-color: #717171;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 3s;
+}
+@keyframes fade {
+    from {opacity: .5}
+    to {opacity: 1}
+}
+.block-2{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    align-items: center;
+    border-bottom: 2px solid brown;
+}
+.block-2 section p {
+    align-items: flex-start;
+}
+.block-2 ul, .block-3 ul{
+    display: grid;
+    gap: 20px 50px;
+    grid-template-columns: repeat(2, 1fr);
+    list-style-type: none;
+    text-align: center;
+    width: 100%;
+}
+.block-2 ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.block-2 section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.block-2 img{
+    width: 100%;
+}
+.block-2 section h1{
+    color: brown;
+}
+.block-2 ul li img{
+    border: 1px solid brown;
+    padding: 5px;
+}
+.block-2 ul li a{
+    color: brown;
+}
+.block-2 section:nth-of-type(2){
+    border-top: 2px solid brown;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+.block-3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid brown;
+}
+.gallery{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    border-bottom: 2px solid brown;
+}
+.gallery ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    list-style-type: none;
+    margin: 30px 0;
+}
+.gallery li img{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5%;
+    box-shadow: 5px 5px 15px 0 black;
+}
+.gallery li img:hover{
+    transform: scale(1.5);
+    transition: .7s;
+}
+.location{
+    position: relative;
+}
+.location iframe{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 0;
+}
+@media screen and (max-width:1200px) {
+    main{width: 960px;}
+}
+@media screen and (max-width:992px) {
+    main{width: 720px;}
+    .pic{margin:0 auto ;
+        float: none;}
+    .block-2 ul, .block-3 ul{
+        grid-template-columns: 1fr;
+    }
+    .gallery ul{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .location iframe{
+        width: 300px;
+        height: 150px;
+    }
+}
+@media screen and (max-width:768px) {
+    main{width: 540px;
+            padding: 30px 0;}
+    .menu>li{margin-right: 20px;}
+    .menu{padding: 10px;}
+    
+}
+@media screen and (max-width:576px) {
+    main{width: 100%;
+            padding: 30px;}
+    .pic{width: 400px;}
+    .menu>li{margin-right: 15px;
+            font-size: 20px;}
+    .submenu>li{margin: 30px 20px;}
+    .gallery ul{
+        grid-template-columns: 1fr;
+    }
+    .gallery li img:hover{
+        transform: none
+    }
+    .location iframe{
+        width: 250px;
+        height: 120px;
+    }
+}
